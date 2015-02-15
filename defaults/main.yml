@@ -1,0 +1,4 @@
+---
+# defaults file for mapr_webserver
+
+proxy_env: { }
