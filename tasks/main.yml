@@ -5,3 +5,7 @@
   with_items:
     - mapr-webserver
   environment: proxy_env
+
+- name: configure stronger DH keys for MCS
+  sudo_user: root
+  hadoop_properties: name=hadoop.ssl.exclude.cipher.suites value='SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_RSA_EXPORT_WITH_RC4_40_MD5,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA' file=/opt/mapr/hadoop/hadoop-0.20.2/conf/core-site.xml
