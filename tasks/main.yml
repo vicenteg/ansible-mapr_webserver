@@ -5,7 +5,6 @@
   yum: name='{{item}}' state=present
   with_items:
     - mapr-webserver
-  environment: '{{proxy_env}}'
 
 - name: configure stronger DH keys for MCS
   become: yes
